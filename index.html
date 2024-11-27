@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallpaper Max | Inspire-se</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Wallpaper Max</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Pesquisar...">
+        </div>
+    </header>
+    <main class="gallery-container">
+        <div class="gallery" id="gallery">
+            <!-- Exemplos de imagens com categorias e nomes -->
+            <div class="wallpaper" data-category="anime, jujutsu kaisen, jujutsu, kaisen" data-name="saturo, saturo gojo, gojjo, goojo, goojjo">
+                <img src="https://i.pinimg.com/736x/d5/15/04/d51504f059604dfd70d3bea0914492d0.jpg" alt="Floresta">
+                <button onclick="downloadImage('https://i.pinimg.com/736x/d5/15/04/d51504f059604dfd70d3bea0914492d0.jpg')">Baixar</button>
+            </div>
+            <div class="wallpaper" data-category="anime, jujutsu kaisen, jujutsu, kaisen" data-name="saturo, saturo gojo, gojjo, goojo, goojjo">
+                <img src="https://i.pinimg.com/736x/1f/ef/5e/1fef5e8f567ccde4303d14db9cc08d71.jpg" alt="Floresta">
+                <button onclick="downloadImage('https://i.pinimg.com/736x/1f/ef/5e/1fef5e8f567ccde4303d14db9cc08d71.jpg')">Baixar</button>
+            </div>
+            <div class="wallpaper" data-category="anime, jujutsu kaisen, jujutsu, kaisen" data-name="saturo, saturo gojo, gojjo, goojo, goojjo">
+                <img src="https://i.pinimg.com/736x/47/4d/e9/474de9357e498ae8cbc7070551ab0e3f.jpg" alt="Floresta">
+                <button onclick="downloadImage('https://i.pinimg.com/736x/47/4d/e9/474de9357e498ae8cbc7070551ab0e3f.jpg')">Baixar</button>
+            </div>
+            <!-- Adicione mais blocos conforme necessário -->
+        </div>  
+    </main>
+    <footer>
+        <p>&copy; 2024 Wallpaper Max</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
