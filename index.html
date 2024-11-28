@@ -3,91 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baixe wallpapers incríveis para celular, com categorias como animais, paisagens e animes.">
+    <meta name="keywords" content="wallpapers, imagens, download, animais, animes, paisagens, fundo de tela">
+    <meta name="author" content="Wallpaper Max">
     <title>Wallpaper Max | Inspire-se</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Wallpaper Max</h1>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Pesquisar...">
+    <header class="header-modern">
+        <div class="header-content">
+            <h1>Wallpaper Max</h1>
+            <p>Os melhores wallpapers ao seu alcance!</p>
+            <div class="search-bar">
+                <label for="searchInput" class="sr-only"></label>
+                <input type="text" id="searchInput" placeholder="Pesquisar...">
+            </div>
         </div>
     </header>
+    
     <main class="gallery-container">
-        <div class="gallery" id="gallery">
-            <div class="wallpaper">
-                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Artes/A%20Dan%C3%A7a%20Macabra%20do%20Artista.jpg" alt="A Dança Macabra do Artista, arte">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Artes/A%20Dan%C3%A7a%20Macabra%20do%20Artista.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
-                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg" alt="Gato Sobre as Ondas, gato, animais, animal">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
-                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Aranha%20Sombria.jpg" alt="Aranha Sombria, desenho, hq, marvel, quadrinhos">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Aranha%20Sombria.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
-                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg" alt="Gato Sobre as Ondas, gato, fofo, animais, animal">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
-                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/O%20Gato%20Misterioso.jpg" alt="O Gato Misterioso, gato, fofo, animal, animais">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/O%20Gato%20Misterioso.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
-                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/O%20Guerreiro%20das%20Sombras.jpg" alt="O Guerreiro das Sombras, anime, berserk">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/O%20Guerreiro%20das%20Sombras.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
-                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/Onda.jpg" alt="Onda, anime, azul, mar">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/Onda.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+        <section class="gallery" id="gallery">
+            <article class="wallpaper">
+                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Artes/A%20Dan%C3%A7a%20Macabra%20do%20Artista.jpg" alt="A Dança Macabra do Artista">
+                <div class="wallpaper-info">
+                    <p class="tag">Arte</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Artes/A%20Dan%C3%A7a%20Macabra%20do%20Artista.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
+                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg" alt="Gato Sobre as Ondas">
+                <div class="wallpaper-info">
+                    <p class="tag">Animais</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
+                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Aranha%20Sombria.jpg" alt="Aranha Sombria">
+                <div class="wallpaper-info">
+                    <p class="tag">Desenhos</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Aranha%20Sombria.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
+                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg" alt="Gato Sobre as Ondas">
+                <div class="wallpaper-info">
+                    <p class="tag">Animais</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/Gato%20Sobre%20as%20Ondas.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
+                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/O%20Gato%20Misterioso.jpg" alt="O Gato Misterioso">
+                <div class="wallpaper-info">
+                    <p class="tag">Animais</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animais/O%20Gato%20Misterioso.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
+                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/O%20Guerreiro%20das%20Sombras.jpg" alt="O Guerreiro das Sombras">
+                <div class="wallpaper-info">
+                    <p class="tag">Animes</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/O%20Guerreiro%20das%20Sombras.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
+                <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/Onda.jpg" alt="Onda">
+                <div class="wallpaper-info">
+                    <p class="tag">Animes</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Animes/Onda.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Carros/Ref%C3%BAgio%20nas%20Montanhas.jpg" alt="Refúgio nas Montanhas">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Carros/Ref%C3%BAgio%20nas%20Montanhas.jpg    ')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Carros</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Carros/Ref%C3%BAgio%20nas%20Montanhas.jpg    ')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Aventuras%20do%20Homem-Aranha.jpg" alt="Aventuras do Homem-Aranha">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Aventuras%20do%20Homem-Aranha.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Desenhos</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Aventuras%20do%20Homem-Aranha.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Cavalheiro%20das%20Flores.jpg" alt="Cavalheiro das Flores">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Cavalheiro%20das%20Flores.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Desenhos</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Desenhos/Cavalheiro%20das%20Flores.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Futuristas/Sol%20Negro.jpg" alt="Sol Negro">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Futuristas/Sol%20Negro.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Futuristas</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Futuristas/Sol%20Negro.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Dormitorio%20Estelar.jpg" alt="Dormitorio Estelar">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Dormitorio%20Estelar.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Paisagens</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Dormitorio%20Estelar.jpg')">Baixar</button>
+                </div>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Explorador%20nas%20Alturas.jpg" alt="Explorador nas Alturas">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Explorador%20nas%20Alturas.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Paisagens</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Explorador%20nas%20Alturas.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Mar%20Sombrio.jpg" alt="Mar Sombrio">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Mar%20Sombrio.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Paisagens</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Mar%20Sombrio.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Nevoa%20Densa.jpg" alt="Nevoa Densa">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Nevoa%20Densa.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Paisagens</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Paisagens/Nevoa%20Densa.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Retros/Jogo%20de%20Cartas%20com%20Apostas%20Altas.jpg" alt="Jogo de Cartas com Apostas Altas">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Retros/Jogo%20de%20Cartas%20com%20Apostas%20Altas.jpg')">Baixar</button>
-            </div>
-            <div class="wallpaper">
+                <div class="wallpaper-info">
+                    <p class="tag">Retros</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Retros/Jogo%20de%20Cartas%20com%20Apostas%20Altas.jpg')">Baixar</button>
+                </div>
+            </article>
+            <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Retros/Publicidade%20Vintage.jpg" alt="Publicidade Vintage">
-                <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Retros/Publicidade%20Vintage.jpg')">Baixar</button>
-            </div> 
-        </div>  
+                <div class="wallpaper-info">
+                    <p class="tag">Retros</p>
+                    <button onclick="downloadImage('https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Retros/Publicidade%20Vintage.jpg')">Baixar</button>
+                </div>
+            </article>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Wallpaper Max</p>
+    <footer class="footer-modern">
+        <p>&copy; 2024 Wallpaper Max | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> | <a href="#">Contato</a></p>
     </footer>
     <script src="script.js"></script>
 </body>

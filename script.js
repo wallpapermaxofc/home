@@ -1,48 +1,46 @@
 function downloadImage(imageUrl) {
+    const button = event.target;
+    button.innerText = "Baixando...";
+    button.disabled = true;
     const link = document.createElement('a');
     link.href = imageUrl;
-    link.download = 'wallpaper.jpg'; // Nome do arquivo padrão
+    link.download = 'wallpaper.jpg'; // Nome padrão
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    button.innerText = "Baixar";
+    button.disabled = false;
 }
 
-// Filtro na barra de pesquisa
-document.getElementById('searchInput').addEventListener('keyup', function() {
-    const searchTerm = this.value.toLowerCase();
-    const wallpapers = document.querySelectorAll('.wallpaper');
+// Debounce para barra de pesquisa
+let debounceTimeout;
+document.getElementById('searchInput').addEventListener('keyup', function () {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+        const searchTerm = this.value.toLowerCase();
+        const wallpapers = document.querySelectorAll('.wallpaper');
+        wallpapers.forEach(wallpaper => {
+            const altText = wallpaper.querySelector('img').alt.toLowerCase();
+            wallpaper.style.display = altText.includes(searchTerm) ? 'block' : 'none';
+        });
+    }, 300);
+});
 
-    wallpapers.forEach(wallpaper => {
-        const imgAlt = wallpaper.querySelector('img').alt.toLowerCase();
-        if (imgAlt.includes(searchTerm)) {
-            wallpaper.style.display = 'block';
-        } else {
-            wallpaper.style.display = 'none';
+    function isMobile() {
+        return /Mobi|Android/i.test(navigator.userAgent);
+    }
+
+    function checkResolution() {
+        if (!isMobile()) {
+            document.body.innerHTML = '<div style="text-align: center; margin-top: 20%; font-family: Montserrat, sans-serif; color: red;"><h1>Erro de Dispositivo</h1><p>Este website não é compatível com dispositivos desktop. Por favor, acesse do seu dispositivo móvel.</p></div>';
         }
-    });
-});
+    }
 
-// Aguarda o carregamento de imagens
-window.addEventListener('load', () => {
-    const gallery = document.getElementById('gallery');
-    const images = gallery.querySelectorAll('img');
-
-    images.forEach(img => {
-        img.onload = () => {
-            img.parentElement.style.visibility = 'visible';
-        };
-    });
-});
-
-window.addEventListener('load', () => {
-    const gallery = document.querySelector('.gallery');
-    const wallpapers = document.querySelectorAll('.wallpaper');
-
-    wallpapers.forEach(item => {
-        const img = item.querySelector('img');
-        img.onload = () => {
-            const height = img.getBoundingClientRect().height;
-            item.style.flexBasis = `${height}px`;
-        };
-    });
-});
+    window.onload = function() {
+        checkResolution();
+        window.addEventListener('resize', function() {
+            setTimeout(function() {
+                location.reload();
+            }, 1500);
+        });
+    };
