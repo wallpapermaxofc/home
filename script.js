@@ -1,3 +1,4 @@
+
 function downloadImage(imageUrl) {
     const button = event.target;
     button.innerText = "Baixando...";
@@ -12,7 +13,14 @@ function downloadImage(imageUrl) {
     button.disabled = false;
 }
 
-// Debounce para barra de pesquisa
+function filterCategory(category) {
+    const wallpapers = document.querySelectorAll('.wallpaper');
+    wallpapers.forEach(wallpaper => {
+        const tag = wallpaper.querySelector('.tag').innerText;
+        wallpaper.style.display = category === '' || tag === category ? 'block' : 'none';
+    });
+}
+
 let debounceTimeout;
 document.getElementById('searchInput').addEventListener('keyup', function () {
     clearTimeout(debounceTimeout);
@@ -26,21 +34,21 @@ document.getElementById('searchInput').addEventListener('keyup', function () {
     }, 300);
 });
 
-    function isMobile() {
-        return /Mobi|Android/i.test(navigator.userAgent);
-    }
+function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
 
-    function checkResolution() {
-        if (!isMobile()) {
-            document.body.innerHTML = '<div style="text-align: center; margin-top: 20%; font-family: Montserrat, sans-serif; color: red;"><h1>Erro de Dispositivo</h1><p>Este website não é compatível com dispositivos desktop. Por favor, acesse do seu dispositivo móvel.</p></div>';
-        }
+function checkResolution() {
+    if (!isMobile()) {
+        document.body.innerHTML = '<div style="text-align: center; margin-top: 20%; font-family: Montserrat, sans-serif; color: red;"><h1>Erro de Dispositivo</h1><p>Este website não é compatível com dispositivos desktop. Por favor, acesse do seu dispositivo móvel.</p></div>';
     }
+}
 
-    window.onload = function() {
-        checkResolution();
-        window.addEventListener('resize', function() {
-            setTimeout(function() {
-                location.reload();
-            }, 1500);
-        });
-    };
+window.onload = function() {
+    checkResolution();
+    window.addEventListener('resize', function() {
+        setTimeout(function() {
+            location.reload();
+        }, 1500);
+    });
+};

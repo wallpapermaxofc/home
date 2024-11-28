@@ -6,8 +6,11 @@
     <meta name="description" content="Baixe wallpapers incríveis para celular, com categorias como animais, paisagens e animes.">
     <meta name="keywords" content="wallpapers, imagens, download, animais, animes, paisagens, fundo de tela">
     <meta name="author" content="Wallpaper Max">
+    <meta property="og:title" content="Wallpaper Max | Inspire-se">
+    <meta property="og:description" content="Os melhores wallpapers para celular estão aqui. Explore categorias incríveis e baixe com um clique.">
+    <meta property="og:image" content="URL_TO_PREVIEW_IMAGE">
     <title>Wallpaper Max | Inspire-se</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles_updated.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,13 +19,19 @@
             <h1>Wallpaper Max</h1>
             <p>Os melhores wallpapers ao seu alcance!</p>
             <div class="search-bar">
-                <label for="searchInput" class="sr-only"></label>
                 <input type="text" id="searchInput" placeholder="Pesquisar...">
             </div>
         </div>
     </header>
     
     <main class="gallery-container">
+        <nav class="filter-menu">
+            <button onclick="filterCategory('')">Todos</button>
+            <button onclick="filterCategory('Arte')">Arte</button>
+            <button onclick="filterCategory('Animais')">Animais</button>
+            <button onclick="filterCategory('Paisagens')">Paisagens</button>
+            <button onclick="filterCategory('Animes')">Animes</button>
+        </nav>
         <section class="gallery" id="gallery">
             <article class="wallpaper">
                 <img src="https://raw.githubusercontent.com/wallpapermaxofc/wallpapers/refs/heads/main/Mobile/Categorias/Artes/A%20Dan%C3%A7a%20Macabra%20do%20Artista.jpg" alt="A Dança Macabra do Artista">
@@ -141,8 +150,12 @@
         </section>
     </main>
     <footer class="footer-modern">
-        <p>&copy; 2024 Wallpaper Max | <a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a> | <a href="#">Contato</a></p>
+        <p>&copy; 2024 Wallpaper Max | 
+            <a href="#">Política de Privacidade</a> | 
+            <a href="#">Termos de Uso</a> | 
+            <a href="#">Contato</a>
+        </p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script_updated.js"></script>
 </body>
 </html>
