@@ -43,12 +43,3 @@ function checkResolution() {
         document.body.innerHTML = '<div style="text-align: center; margin-top: 20%; font-family: Montserrat, sans-serif; color: red;"><h1>Erro de Dispositivo</h1><p>Este website não é compatível com dispositivos desktop. Por favor, acesse do seu dispositivo móvel.</p></div>';
     }
 }
-
-window.onload = function() {
-    checkResolution();
-    window.addEventListener('resize', function() {
-        setTimeout(function() {
-            location.reload();
-        }, 1500);
-    });
-};
