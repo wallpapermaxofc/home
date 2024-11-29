@@ -20,3 +20,16 @@ function filterCategory(category) {
         wallpaper.style.display = category === '' || tag === category ? 'block' : 'none';
     });
 }
+
+let debounceTimeout;
+document.getElementById('searchInput').addEventListener('keyup', function () {
+    clearTimeout(debounceTimeout);
+    debounceTimeout = setTimeout(() => {
+        const searchTerm = this.value.toLowerCase();
+        const wallpapers = document.querySelectorAll('.wallpaper');
+        wallpapers.forEach(wallpaper => {
+            const altText = wallpaper.querySelector('img').alt.toLowerCase();
+            wallpaper.style.display = altText.includes(searchTerm) ? 'block' : 'none';
+        });
+    }, 300);
+});
