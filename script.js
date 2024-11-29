@@ -20,13 +20,3 @@ function filterCategory(category) {
         wallpaper.style.display = category === '' || tag === category ? 'block' : 'none';
     });
 }
-
-function isMobile() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-}
-
-function checkResolution() {
-    if (!isMobile()) {
-        document.body.innerHTML = '<div style="text-align: center; margin-top: 20%; font-family: Montserrat, sans-serif; color: red;"><h1>Erro de Dispositivo</h1><p>Este website não é compatível com dispositivos desktop. Por favor, acesse do seu dispositivo móvel.</p></div>';
-    }
-}
